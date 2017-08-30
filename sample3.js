@@ -1,20 +1,20 @@
-// literal ways to generate  a key value pairs
-var vehicle = {
-    model:"2017"
-}
-var car = {
-    make: "Toyota",
-   
+// literal way OOP prototype
+
+const dog = {
+    name: 'canine',
+    bark: function() {
+        console.log('woof woof!')
+    }
 }
 
-car.prototype= vehicle;
-var c = Object.create(car);
-console.log(car);
-car.prototype.getInfo=function(){
-    return this.make+" "+this.prototype.model;
-  };
-console.log(car.getInfo);
-console.log(c);
-console.log(c.make);//toyota
-console.log(c.prototype);//vehicle
-console.log(c.prototype.model);//2017
+const pug = Object.create(dog);
+// pug.__proto__ = dog;
+pug.__proto__.dance = function(){
+        console.log('pug can dance');
+    }
+// override bark() of dog
+pug.__proto__.bark = function(){
+    console.log("Pug ovverride woof woof !");
+} 
+pug.bark();
+pug.dance();
