@@ -29,5 +29,12 @@ console.log(car.getInfo());
 console.log(car.drive());
 console.log(car.start());
 
+console.log(car instanceof Car);
+console.log(car instanceof Vehicle);
 
 
+
+// var v = Vehicle(2018);
+// var ve = new Vehicle(2019);
+// console.log(ve instanceof Vehicle);
+// console.log(v instanceof Vehicle);
