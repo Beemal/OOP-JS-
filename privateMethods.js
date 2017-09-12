@@ -14,5 +14,9 @@ function makeCounter() {
     }
     
     };
-    var counter1 = new makeCounter();
+    var counter1 =  makeCounter(); 
+    var counter2 = makeCounter(); 
     console.log(counter1.value());
+    counter1.increment();
+    console.log(counter1.value());
+    console.log(counter2.value());
